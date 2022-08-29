@@ -1,0 +1,58 @@
+{
+  "cakeList": [
+    {
+      "name": "Bread Cake Tower",
+      "desc": "Fill your tommy with a tower of jelly bread and strawberry cake",
+      "price": 8.99,
+      "id": 1
+    },
+    {
+      "name": "Chocolate Coffee Cake",
+      "desc": "Enjoy your coffee and your chocolate cake in one peice",
+      "price": 2.99,
+      "id": 2
+    },
+    {
+      "name": "Banana Milk Cake",
+      "desc": "Enjoy your favorite fruit alongside an irrestible milk cake",
+      "price": 3.99,
+      "id": 3
+    },
+    {
+      "name": "Egg Milk Cake",
+      "desc": "Your breakfast of deliciousness",
+      "price": 3.99,
+      "id": 4
+    },
+    {
+      "name": "Jelly Milk Cake",
+      "desc": "Here's a little something for the holidays.. a Jelly Milk Cake!",
+      "price": 4.22,
+      "id": 5
+    },
+    {
+      "name": "One Layer Milk Cake",
+      "desc": "A small peice of cake that builds a large appetite",
+      "price": 4.99,
+      "id": 6
+    },
+    {
+      "name": "Pancake Birthday Cake",
+      "desc": "The most delicious birthday cake for the kids!",
+      "price": 5.99,
+      "id": 7
+    },
+    {
+      "name": "Rainbow Cupcake",
+      "desc": "Different flavors milk into one, enjoy the yummy goodness!",
+      "price": 2.99,
+      "id": 8
+    },
+    {
+      "name": "Spiral Cookie Cake",
+      "desc": "Not your average cookie!",
+      "price": 5.99,
+      "id": 9
+    }
+  ]
+}

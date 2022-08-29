@@ -1,0 +1,27 @@
+#hero{
+    background-image: url("../assets/background.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+footer{
+    background-color: #ad857d;
+}
+
+#hero  p{
+    color: #ad857d;
+}
+
+.text-milk{
+    color: mintcream !important;
+}
+
+.text-primary{
+    color: #341d19 !important;
+}
+
+.card-img-top{
+    height: 200px;
+}
