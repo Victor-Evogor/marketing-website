@@ -1,17 +1,20 @@
 //import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { Dropdown, Carousel as Carousels } from "bootstrap/dist/js/bootstrap.esm.min.js";
+import {
+  Dropdown,
+  Carousel as Carousels,
+} from "bootstrap/dist/js/bootstrap.esm.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import camelcase from "camelcase";
 import images from "../data/images.js";
-import { useState, useRef, useEffect, useContext, createContext, } from "react";
+import { useState, useRef, useContext, createContext } from "react";
 import "./home.css";
 import cakes from "../data/cakes.json";
-import Nav from "../components/nav.js";
+import Nav from "../components/Nav.js";
 import Footer from "../components/footer.js";
+import { Link } from "react-router-dom";
 let { hero } = images;
 
 let GlobalStore = createContext();
-
 
 //window.dropdwon = Dropdown;
 
@@ -22,7 +25,6 @@ function Header() {
   let [suggestionsItems, setItems] = useState([]);
   let suggestions;
   const div = useContext(GlobalStore);
-
 
   function scrollToItem(event) {
     let index = event.target.getAttribute("data-index");
@@ -39,7 +41,11 @@ function Header() {
       setItems((val) =>
         val.concat(
           <li className="" key={key} onClick={scrollToItem}>
-            <a className="dropdown-item" href="#showcase" data-index={elem.id - 1}>
+            <a
+              className="dropdown-item"
+              href="#showcase"
+              data-index={elem.id - 1}
+            >
               {elem.name}
             </a>
           </li>
@@ -74,14 +80,19 @@ function Header() {
 
   return (
     <header>
-      <Nav dropdown={dropdown} suggestionsItems={suggestionsItems} search={search} input={input}/>
+      <Nav
+        dropdown={dropdown}
+        suggestionsItems={suggestionsItems}
+        search={search}
+        input={input}
+      />
       <section
         id="hero"
         className="text-light d-flex justify-content-center align-items-center "
       >
         <div>
           <h1 className="text-primary display-2 fw-bold text-center">
-            <span className="text-milk">Mummy's</span> Cake
+            <span className="text-aqua">Mum</span><span className="text-">my's</span> Cake
           </h1>
           <p className="text-center lead fw-bold">
             We deliver the best cake at affordable prices
@@ -97,9 +108,8 @@ function Header() {
 function Showcase() {
   let { cakeList } = cakes;
 
-
   return (
-    <section id="showcase" className="row py-3  container">
+    <section id="showcase" className="row py-3  container gy-3">
       <div className="  col-sm-5">
         <Carousel>
           {cakeList.reduce((a, cake, index) => {
@@ -116,7 +126,7 @@ function Showcase() {
           }, [])}
         </Carousel>
       </div>
-      <div className="col-sm-7">
+      <div className="col-sm-7 mt-3">
         <h2>Any type of cake shipped to your doorstep!</h2>
         <p className="lead">
           We are the leading brand in the cake industry in over five continents.
@@ -148,7 +158,6 @@ function Showcase() {
 }
 
 function Carousel({ children }) {
-
   let carousel = useContext(GlobalStore);
 
   return (
@@ -209,27 +218,23 @@ function Card({ img, title, body, price }) {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{body}</p>
-        <a href="#" className="btn btn-primary">
-          Order
-        </a>
+        <Link to="layout/order" className="btn btn-primary">Order</Link>
       </div>
       <div className="card-footer">${price}</div>
     </div>
   );
 }
 
-
-
 function Home() {
-  let [carousel,_] = useState(useRef());
+  let [carousel, _] = useState(useRef());
 
   return (
     <>
       <GlobalStore.Provider value={carousel}>
-      <Header />
-      <Showcase />
+        <Header />
+        <Showcase />
       </GlobalStore.Provider>
-      <Footer/>
+      <Footer />
     </>
   );
 }

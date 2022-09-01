@@ -24,7 +24,7 @@ function Footer() {
           </svg>
           <div className="small">
             <strong>DISCLAIMER:</strong> This website was made by{" "}
-            <a href="#" className="alert-link">
+            <a href="https://linktr.ee/victorevogor" target="_blank" className="alert-link">
               Victor Evogor
             </a>{" "}
             as a personal project! None of the cakes or orders are real.

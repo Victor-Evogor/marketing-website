@@ -25,3 +25,11 @@ footer{
 .card-img-top{
     height: 200px;
 }
+
+.text-yellow{
+    color: #eb9801 !important;
+}
+
+.text-aqua{
+    color: rgb(60, 109, 95);
+}
